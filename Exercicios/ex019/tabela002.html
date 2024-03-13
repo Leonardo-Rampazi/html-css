@@ -7,10 +7,12 @@
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
+            /*dá estilo da font ao corpo da tabela, ou seja tudo que está dentro de Estado e população*/
         }
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th{
             border: 1px solid black;
@@ -23,8 +25,14 @@
             background-color: lightgray;
         }
         thead, tfoot{
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+            /*Faz com que o cabeçalho de Estado e população quando desce acompanha a tabela*/
         }
         tbody > tr:nth-child(odd) { /*pode ser também odd=impar assim: 2n-1*/
             background-color: lightgray;
