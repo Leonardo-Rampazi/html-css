@@ -24,10 +24,8 @@ section#telefone{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);/*ou seja a caixa que estava na parte de baixo ela centraliza com os codigos acimas*/
-
     height: 627px;
     width: 311px;
-    
     background: url('../imagens/frame-iphone.png') no-repeat;
 }
 iframe#tela{
@@ -45,4 +43,11 @@ section#redes-sociais img{
     margin: 10px;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
+    box-sizing: border-box;
+}
+section#redes-sociais img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.603);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.562);
+    transition: transform 0.3s, border 1s;
 }
