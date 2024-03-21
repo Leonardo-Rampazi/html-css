@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
-        <h1>Meu Site</h1>
+        <h1>Meu Site!</h1>
+        <i>
+            <div id="burguer" class="menu-button-parent">
+            
+                <button id="menu-button">&#9776;</button>
+            </div>
+        </i>
         <menu>
-            <ul>
-                <li><a href="#">Opção 1</a></li>
-                <li><a href="#">Opção 2</a></li>
-                <li><a href="#">opção 3</a></li>
-                <li><a href="#">Opção 4</a></li>
-                <li><a href="#">Opção 5</a></li>
-            </ul>
+            <div id="menu">
+                <ul>
+                    <li><a href="#">Opção 1</a></li>
+                    <li><a href="#">Opção 2</a></li>
+                    <li><a href="#">opção 3</a></li>
+                    <li><a href="#">Opção 4</a></li>
+                    <li><a href="#">Opção 5</a></li>
+                </ul>
+            </div>
         </menu>
     </header>
     <main>
@@ -31,9 +40,26 @@
 
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione commodi eum molestiae, veritatis dolore atque temporibus ab eaque dolorem omnis alias. Natus sed eum cum. Deserunt odit ipsa earum et! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae possimus perferendis saepe error at minus! Eligendi doloremque expedita, eaque tempore cumque, quas facilis fugit minus incidunt inventore earum! Iste, suscipit!
             </p>
-
-            <p></p>
         </article>
     </main>
+    <script>
+        var menuButton = document.getElementById("menu-button");
+var menu = document.getElementById("menu");
+
+menuButton.addEventListener("click", function() {
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+});
+function mudouTamanho(){
+    if(window.innerWidth>= 768){
+        Itens.style.display='block'
+    }else{
+        Itens.style.display='none'
+    }
+}
+    </script>
 </body>
 </html>
